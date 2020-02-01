@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "DashBoardBuyer";
+}
+
+<h1>DashBoardBuyer</h1>
+<h2 class="text-right text-primary"><a asp-action="Logout" asp-controller="Buyer">Logout</a></h2>
+@if (Context.Session.GetString("b_id") != null)
+{
+    <h3 class="text-danger"> @Context.Session.GetString("b_id").ToString()</h3>
+}
+@*<h3 class="text-danger">Welcome @ViewBag.uname</h3>*@
+<h3 class="text-danger">Your last login time is @ViewBag.lltd</h3>
